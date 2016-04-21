@@ -1,3 +1,3 @@
 #Readme.md 
 
-Reposório de models em Sequelize
+Reposório de models em Sequelize.
