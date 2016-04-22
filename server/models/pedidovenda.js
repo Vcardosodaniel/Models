@@ -1,99 +1,81 @@
 'use strict';
 module.exports = function(sequelize, DataTypes){
 	var pedidovenda = sequelize.define ('pedidovenda', {
-
 		ID: {
-			type: Sequelize.INTEGER,
+			type: DataTypes.INTEGER,
 			field: 'CODIGO',
 			primaryKey: true,
 			allowNull: false
 		},
-
 		ORDER_CODE: {
-			type: Sequelize.INTEGER,
+			type: DataTypes.INTEGER,
 			field: 'CODIGOCOMANDA'
 		},
-
 		CLIENT: {
-			type: Sequelize.INTEGER,
+			type: DataTypes.INTEGER,
 			field: 'CLIENTE',
 			allowNull: false
 		},
-
 		CONFIRMED: {
-			type: Sequelize.INTEGER,
+			type: DataTypes.INTEGER,
 			field: 'CONFIRMADO'
 		},
-
 		SELLER: {
-			type: Sequelize.INTEGER,
+			type: DataTypes.INTEGER,
 			field: 'VENDEDOR',
 			allowNull: false
 		},
-
 		ESTIMATE_DATE: {
-			type: Sequelize.DATE,
+			type: DataTypes.DATE,
 			field: 'DATAORCAMENTO',
 			allowNull: false
 		},
-
 		VALIDATE_DATE: {
-			type: Sequelize.DATE,
+			type: DataTypes.DATE,
 			field: 'DATAVALIDADE'
 		},
-
 		DISCOUNT: {
-			type: Sequelize.DOUBLE,
+			type: DataTypes.DOUBLE,
 			field: 'DESCONTO'
 		},
-
 		FISCAL_DOC: {
-			type: Sequelize.INTEGER,
+			type: DataTypes.INTEGER,
 			field: 'DOCFISCAL'
 		},
-
 		DOC_TYPE: {
-			type: Sequelize.STRING,
+			type: DataTypes.STRING,
 			field: 'TIPODOC'
 		},
-
 		OBS: {
-			type: Sequelize.BLOB,
+			type: DataTypes.BLOB,
 			field: 'OBSERVACAO'
 		},
-
 		PED_ORC: {
-			type: Sequelize.INTEGER,
+			type: DataTypes.INTEGER,
 			field: 'PED_ORC'
 		},
-
 		TOTAL: {
-			type: Sequelize.DOUBLE,
+			type: DataTypes.DOUBLE,
 			field: 'TOTAL'
 		},
-
 		IMPRESSED: {
-			type: Sequelize.TEXT('tiny'),
+			type: DataTypes.TEXT('tiny'),
 			field: 'IMPRESSO'
 		},
-
 		CLIENT_NAME: {
-			type: Sequelize.STRING,
+			type: DataTypes.STRING,
 			field: 'CLIENTE_NOME'
 		},
-
 		CLOSED: {
-			type: Sequelize.TEXT('tiny'),
+			type: DataTypes.TEXT('tiny'),
 			field: 'FECHADO'
 		},
-
 		DELIVERY_DATA: {
-			type: Sequelize.DATE,
+			type: DataTypes.DATE,
 			field: 'DATA_ENTREGA'
 		}, 
-
 		PAYMENT_FORM: {
-			type: Sequelize.TEXT('tiny'),
+			type: DataTypes.TEXT('tiny'),
 			field: 'FORMA_PAGAMENTO'
 		}
 	}, {
