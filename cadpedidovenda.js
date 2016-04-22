@@ -133,7 +133,7 @@ var cadpedidovenda = sequelize.define ('cadpedidovenda', {
 			setOBSERVACAO: function(OBSERVACAO) {return this.setDataValue('OBSERVACAO')};
 			setPED_ORC: function(PED_ORC) {return this.setDataValue('PED_ORC')};
 			setTOTAL: function(TOTAL) {return this.setDataValue('TOTAL')};
-			setIMPRESSO: function() {return this.setDataValue('IMPRESSO')};
+			setIMPRESSO: function(IMPRESSO) {return this.setDataValue('IMPRESSO')};
 			setCLIENTE_NOME: function(CLIENTE_NOME) {return this.setDataValue('CLIENTE_NOME')};
 			setFECHADO: function(FECHADO) {return this.setDataValue('FECHADO')};
 			setDATA_ENTREGA: function(DATA_ENTREGA) {return this.setDataValue('DATA_ENTREGA')};
