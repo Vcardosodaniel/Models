@@ -87,5 +87,5 @@ module.exports = function(sequelize, DataTypes){
 		freezeTableName: true
 		}
 	);
-	return pedidovenda;
+	return user;
 };

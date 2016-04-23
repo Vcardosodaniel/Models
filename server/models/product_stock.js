@@ -145,7 +145,7 @@ module.exports = function(sequelize, DataTypes){
 			field: 'MEDIDA'
 		},
 		cod_tech_record: {
-			type: DataTypes.INTEGER.
+			type: DataTypes.INTEGER,
 			field: 'CODFICHATECNICA'
 		},
 		cod_kit: {
@@ -300,5 +300,5 @@ module.exports = function(sequelize, DataTypes){
 		freezeTableName: true
 		}
 	);
-	return pedidovenda;
+	return product_stock;
 };
