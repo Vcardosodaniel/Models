@@ -1,80 +1,80 @@
 'use strict';
 module.exports = function(sequelize, DataTypes){
-	var pedidovenda = sequelize.define ('pedidovenda', {
-		ID: {
+	var salesorder = sequelize.define ('salesorder', {
+		id: {
 			type: DataTypes.INTEGER,
 			field: 'CODIGO',
 			primaryKey: true,
 			allowNull: false
 		},
-		ORDER_CODE: {
+		order_code: {
 			type: DataTypes.INTEGER,
 			field: 'CODIGOCOMANDA'
 		},
-		CLIENT: {
+		client: {
 			type: DataTypes.INTEGER,
 			field: 'CLIENTE',
 			allowNull: false
 		},
-		CONFIRMED: {
+		confirmed: {
 			type: DataTypes.INTEGER,
 			field: 'CONFIRMADO'
 		},
-		SELLER: {
+		seller: {
 			type: DataTypes.INTEGER,
 			field: 'VENDEDOR',
 			allowNull: false
 		},
-		ESTIMATE_DATE: {
+		estimate_date: {
 			type: DataTypes.DATE,
 			field: 'DATAORCAMENTO',
 			allowNull: false
 		},
-		VALIDATE_DATE: {
+		validate_date: {
 			type: DataTypes.DATE,
 			field: 'DATAVALIDADE'
 		},
-		DISCOUNT: {
+		discount: {
 			type: DataTypes.DOUBLE,
 			field: 'DESCONTO'
 		},
-		FISCAL_DOC: {
+		fiscal_doc: {
 			type: DataTypes.INTEGER,
 			field: 'DOCFISCAL'
 		},
-		DOC_TYPE: {
+		doc_type: {
 			type: DataTypes.STRING,
 			field: 'TIPODOC'
 		},
-		OBS: {
+		obs: {
 			type: DataTypes.BLOB,
 			field: 'OBSERVACAO'
 		},
-		PED_ORC: {
+		ped_orc: {
 			type: DataTypes.INTEGER,
 			field: 'PED_ORC'
 		},
-		TOTAL: {
+		total: {
 			type: DataTypes.DOUBLE,
 			field: 'TOTAL'
 		},
-		IMPRESSED: {
+		impressed: {
 			type: DataTypes.TEXT('tiny'),
 			field: 'IMPRESSO'
 		},
-		CLIENT_NAME: {
+		client_name: {
 			type: DataTypes.STRING,
 			field: 'CLIENTE_NOME'
 		},
-		CLOSED: {
+		closed: {
 			type: DataTypes.TEXT('tiny'),
 			field: 'FECHADO'
 		},
-		DELIVERY_DATA: {
+		delivery_date: {
 			type: DataTypes.DATE,
 			field: 'DATA_ENTREGA'
 		}, 
-		PAYMENT_FORM: {
+		payment_form: {
 			type: DataTypes.TEXT('tiny'),
 			field: 'FORMA_PAGAMENTO'
 		}

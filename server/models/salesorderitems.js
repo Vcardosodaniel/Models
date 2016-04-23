@@ -1,81 +1,81 @@
 'use strict';
 module.exports = function(sequelize, DataTypes){
-	var itenspedidovenda = sequelize.define('itenspedidovenda', {
-		ID: {
+	var salesorderitems = sequelize.define('salesorderitems', {
+		id: {
 			type: DataTypes.INTEGER,
 			field: 'CODIGO',
 			primaryKey: true,
 			allowNull: false
 		},
-		ORDER_NUM: {
+		order_num: {
 			type: DataTypes.INTEGER,
 			field: 'NUM_PEDIDO'
 		},
-		PRODUCT: {
+		product: {
 			type: DataTypes.INTEGER,
 			field: 'PRODUTO'
 		},
-		QUANTITY: {
+		quantity: {
 			type: DataTypes.DOUBLE,
 			field: 'QUANTIDADE'
 		},
-		AMOUNT: {
+		amount: {
 			type: DataTypes.DOUBLE,
 			field: 'VALOR'
 		},
-		PAYMENT_TERM: {
+		payment_term: {
 			type: DataTypes.DOUBLE,
 			field: 'VALORPRAZO'
 		},
-		IN_CASH: {
+		in_cash: {
 			type: DataTypes.DOUBLE,
 			field: 'VALORVISTA'
 		},
-		DISCOUNT: {
+		discount: {
 			type: DataTypes.DOUBLE,
 			field: 'DESCONTO'
 		},
-		DISCOUNT_TERM: {
+		discount_term: {
 			type: DataTypes.DOUBLE,
 			field: 'DESCONTOPRAZO'
 		},
-		DISCOUNT_IN_CASH: {
+		discount_in_cash: {
 			type: DataTypes.DOUBLE,
 			field: 'DESCONTOVISTA'
 		},
-		CANCELED: {
+		canceled: {
 			type: DataTypes.TEXT('tiny'),
 			field: 'CANCELADO'
 		},
-		INCLUSION_DATE: {
+		inclusion_time: {
 			type: DataTypes.DATE,
 			field: 'DT_INCLUSAO'
 		},
-		ALIQUOT_TYPE: {
+		aliquot_type: {
 			type: DataTypes.STRING,
 			field: 'ALIQUOTA_TIPO'
 		},
-		ALIQUOT_VALUE: {
+		aliquot_value: {
 			type: DataTypes.DOUBLE,
 			field: 'ALIQUOTA_VALOR'
 		},
-		ALIQUOT_INDEX: {
+		aliquot_index: {
 			type: DataTypes.INTEGER,
 			field: 'ALIQUOTA_INDICE'
 		},
-		PRODUCT_DESC: {
+		product_desc: {
 			type: DataTypes.STRING,
 			field: 'PRODUTO_DESCRICAO'
 		},
-		UNITY: {
+		unity: {
 			type: DataTypes.STRING,
 			field: 'UNIDADE'
 		},
-		USER_CANC: {
+		user_canc: {
 			type: DataTypes.INTEGER,
 			field: 'USUARIO_CANC'
 		},
-		USER_ENTRY: {
+		user_entry: {
 			type: DataTypes.INTEGER,
 			field: 'USUARIO_LANC'
 		}
