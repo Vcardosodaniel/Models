@@ -5,15 +5,24 @@ module.exports = function(sequelize, DataTypes){
 			type: DataTypes.INTEGER,
 			field: 'CODIGO',
 			primaryKey: true,
+			autoIncrement: true,
 			allowNull: false
 		},
 		order_num: {
 			type: DataTypes.INTEGER,
-			field: 'NUM_PEDIDO'
+			field: 'NUM_PEDIDO',
+			references: {
+				model: 'salesorder',
+				key: 'id'
+			}
 		},
 		product: {
 			type: DataTypes.INTEGER,
-			field: 'PRODUTO'
+			field: 'PRODUTO',
+			references: {
+				model: 'product_stock',
+				key: 'id'
+			}
 		},
 		quantity: {
 			type: DataTypes.DOUBLE,
@@ -73,11 +82,19 @@ module.exports = function(sequelize, DataTypes){
 		},
 		user_canc: {
 			type: DataTypes.INTEGER,
-			field: 'USUARIO_CANC'
+			field: 'USUARIO_CANC',
+			references: {
+				model: 'user',
+				key: 'id'
+			}
 		},
 		user_entry: {
 			type: DataTypes.INTEGER,
-			field: 'USUARIO_LANC'
+			field: 'USUARIO_LANC',
+			references: {
+				model: 'user',
+				key: 'id'
+			}
 		}
 	}, {
 		freezeTableName: true

@@ -5,6 +5,7 @@ module.exports = function(sequelize, DataTypes){
 			type: DataTypes.INTEGER,
 			field: 'CODIGO',
 			primaryKey: true,
+			autoIncrement: true,
 			allowNull: false
 		},
 		user_name: {

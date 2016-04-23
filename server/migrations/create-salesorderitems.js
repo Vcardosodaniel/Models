@@ -1,17 +1,26 @@
 'use strict';
 module.exports = {
 	up: function(queryInterface, Sequelize){
-		return queryInterface.createTable('itenspedidovenda', {
+		return queryInterface.createTable('salesorderitems', {
 			id: {
 				type: Sequelize.INTEGER,
 				primaryKey: true,
+				autoIncrement: true,
 				allowNull: false
 			},
 			order_num: {
-				type: Sequelize.INTEGER
+				type: Sequelize.INTEGER,
+				references: {
+					model: 'salesorder',
+					key: 'id'
+				}
 			},
 			product: {
-				type: Sequelize.INTEGER
+				type: Sequelize.INTEGER,
+				references: {
+					model: 'product_stock',
+					key: 'id'
+				}
 			},
 			quantity: {
 				type: Sequelize.DOUBLE
@@ -57,13 +66,21 @@ module.exports = {
 			},
 			user_canc: {
 				type: Sequelize.INTEGER,
+				references: {
+					model: 'user',
+					key: 'id'
+				}
 			},
 			user_entry: {
-				type: Sequelize.INTEGER
+				type: Sequelize.INTEGER,
+				references: {
+					model: 'user',
+					key: 'id'
+				}
 			}
 		});
 	},
 	down: function(queryInterface, Sequelize) {
-		return queryInterface.dropTable('itenspedidovenda');
+		return queryInterface.dropTable('salesorderitems');
 	}
 };

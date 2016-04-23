@@ -5,6 +5,7 @@ module.exports = function(sequelize, DataTypes){
 			type: DataTypes.INTEGER,
 			field: 'CODIGO',
 			primaryKey: true,
+			autoIncrement: true,
 			allowNull: false
 		},
 		order_code: {
@@ -14,7 +15,11 @@ module.exports = function(sequelize, DataTypes){
 		client: {
 			type: DataTypes.INTEGER,
 			field: 'CLIENTE',
-			allowNull: false
+			allowNull: false,
+			references: {
+				model: 'client',
+				key: 'id'
+			}
 		},
 		confirmed: {
 			type: DataTypes.INTEGER,
@@ -23,7 +28,11 @@ module.exports = function(sequelize, DataTypes){
 		seller: {
 			type: DataTypes.INTEGER,
 			field: 'VENDEDOR',
-			allowNull: false
+			allowNull: false,
+			references: {
+				model: 'user',
+				key: 'id'
+			}
 		},
 		estimate_date: {
 			type: DataTypes.DATE,

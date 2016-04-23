@@ -1,10 +1,11 @@
 'use strict';
 module.exports = {
 	up: function(queryInterface, Sequelize){
-		return queryInterface.createTable('pedidovenda', {
+		return queryInterface.createTable('salesorder', {
 			id: {
 				type: Sequelize.INTEGER,
 				primaryKey: true,
+				autoIncrement: true,
 				allowNull: false
 			},
 			order_code: {
@@ -12,14 +13,22 @@ module.exports = {
 			},
 			client: {
 				type: Sequelize.INTEGER,
-				allowNull: false
+				allowNull: false,
+				references: {
+					model: 'client',
+					key: 'id'
+				}
 			},
 			confirmed: {
 				type: Sequelize.INTEGER
 			},
 			seller: {
 				type: Sequelize.INTEGER,
-				allowNull: false
+				allowNull: false,
+				references: {
+					model: 'user',
+					key: 'id'
+				}
 			},
 			estimate_date: {
 				type: Sequelize.DATE,
@@ -64,6 +73,6 @@ module.exports = {
 		});
 	},
 	down: function(queryInterface, Sequelize) {
-		return queryInterface.dropTable('pedidovenda');
+		return queryInterface.dropTable('salesorder');
 	}
 };
