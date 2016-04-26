@@ -6,7 +6,8 @@ module.exports = function(sequelize, DataTypes){
 			field: 'CODIGO',
 			primaryKey: true,
 			autoIncrement: true,
-			allowNull: false
+			allowNull: false,
+			unique: true
 		},
 		order_code: {
 			type: DataTypes.INTEGER,
@@ -89,6 +90,15 @@ module.exports = function(sequelize, DataTypes){
 		}
 	}, {
 		freezeTableName: true
+		},
+		{
+			classMethods:{
+				associate: function(models){
+					salesorder.hasMany(models.salesorderitems);
+					salesorder.hasOne(models.client);
+					salesorder.hasOne(models.user);
+				}
+			}
 		}
 	);
 	return salesorder;

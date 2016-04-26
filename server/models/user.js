@@ -6,7 +6,8 @@ module.exports = function(sequelize, DataTypes){
 			field: 'CODIGO',
 			primaryKey: true,
 			autoIncrement: true,
-			allowNull: false
+			allowNull: false,
+			unique: true
 		},
 		user_name: {
 			type: DataTypes.STRING,
