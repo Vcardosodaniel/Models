@@ -1,6 +1,6 @@
 'use strict';
 module.exports = function(sequelize, DataTypes){
-	var product_stock = sequelize.define ('product_stock', {
+	var productStock = sequelize.define ('productStock', {
 		id: {
 			type: DataTypes.INTEGER,
 			field: 'CODIGO',
@@ -301,5 +301,5 @@ module.exports = function(sequelize, DataTypes){
 		freezeTableName: true
 		}
 	);
-	return product_stock;
+	return productStock;
 };
